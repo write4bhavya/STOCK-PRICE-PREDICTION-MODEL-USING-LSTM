@@ -1,34 +1,32 @@
 # STOCK-PRICE-PREDICTION-MODEL-USING-LSTM
-# 📈 Stock Price Prediction using LSTM & PyTorch (CUDA)
+# 📈 Stock Price Prediction using LSTM and PyTorch (with CUDA Support)
 
-This project implements an LSTM-based deep learning model to predict stock prices using historical data and technical indicators. The model is trained using PyTorch with optional CUDA support for faster computation.
-
----
-
-## 🔁 Workflow
-
-1. **Fetch stock data** using `yfinance`
-2. **Compute technical indicators**: MACD, RSI, EMA, SMA
-3. **Preprocess data**: Normalize and sequence using `MinMaxScaler`
-4. **Train an LSTM model** on the sequences
-5. **Predict and forecast prices**, then visualize results
+This project focuses on predicting future stock prices using historical data and technical indicators through an LSTM (Long Short-Term Memory) neural network, implemented using PyTorch. The model is trained on normalized, time-sequenced data and optionally leverages GPU acceleration using CUDA for efficient computation.
 
 ---
 
-## 📁 File Structure
+## 🚀 Key Features
 
-- `data.py` → Data download, indicators, and preprocessing  
-- `model.py` → LSTM architecture  
-- `utils.py` → Plotting technical indicators  
-- `train.py` → Model training, prediction, and visualization  
-- `requirements.txt` → Dependencies  
-- `README.md` → Project overview
+- Historical stock data retrieval using Yahoo Finance API
+- Technical indicators: MACD, RSI, EMA, SMA
+- LSTM-based deep learning model for time series forecasting
+- CUDA/GPU acceleration (if available)
+- Clean modular code structure for reusability
+- Visualization of both training performance and forecasts
 
 ---
 
-## 🧰 Libraries
+## 🧠 Project Structure
 
-- `pandas`, `numpy`, `matplotlib`
+```plaintext
+📁 stock-price-prediction-lstm/
+├── data.py            # Data fetching, technical indicators, preprocessing
+├── model.py           # LSTM model architecture (PyTorch)
+├── train.py           # Main script for training and prediction
+├── utils.py           # Visualization of technical indicators
+├── requirements.txt   # Python dependencies
+└── README.md          # Project documentation
+
 - `yfinance`, `scikit-learn`
 - `torch` (PyTorch)
 
