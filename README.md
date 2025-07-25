@@ -27,10 +27,6 @@ This project focuses on predicting future stock prices using historical data and
 ├── requirements.txt   # Python dependencies
 └── README.md          # Project documentation
 
-- `yfinance`, `scikit-learn`
-- `torch` (PyTorch)
-
----
 
 ## ▶️ Run Instructions
 
