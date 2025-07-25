@@ -68,4 +68,37 @@ Main execution script that orchestrates the end-to-end pipeline:
 
 ---
 
+## 📚 Libraries Used
+
+This project uses the following Python libraries:
+
+### 🧮 Data Handling
+- **pandas**: Efficient manipulation of time series and tabular data
+- **numpy**: Numerical operations and array handling
+
+### 📉 Financial Data
+- **yfinance**: Fetches historical market data directly from Yahoo Finance
+
+### 📊 Visualization
+- **matplotlib**: Used to plot technical indicators and forecast results
+
+### 🧠 Machine Learning
+- **scikit-learn**: 
+  - `MinMaxScaler` for feature normalization
+  - `r2_score` to evaluate model performance
+
+### 🔥 Deep Learning
+- **PyTorch**: 
+  - Model building (`nn.Module`)
+  - GPU acceleration (`cuda`)
+  - Loss functions and optimizers
+
+---
+
+To install all dependencies:
+
+```bash
+pip install -r requirements.txt
+
+
 
