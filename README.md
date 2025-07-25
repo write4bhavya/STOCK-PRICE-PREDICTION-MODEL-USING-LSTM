@@ -16,20 +16,39 @@ This project focuses on predicting future stock prices using historical data and
 
 ---
 
-## 🧠 Project Structure
+🔍 File Descriptions
+data.py
+Handles data-related operations:
 
-```plaintext
-📁 stock-price-prediction-lstm/
-├── data.py            # Data fetching, technical indicators, preprocessing
-├── model.py           # LSTM model architecture (PyTorch)
-├── train.py           # Main script for training and prediction
-├── utils.py           # Visualization of technical indicators
-├── requirements.txt   # Python dependencies
-└── README.md          # Project documentation
+fetch_data(): Downloads historical stock data using yfinance
 
+compute_technical_indicators(): Calculates MACD, RSI, EMA, SMA
 
-## ▶️ Run Instructions
+preprocess_data(): Normalizes features and generates training sequences (X, y) for LSTM
 
-```bash
-pip install -r requirements.txt
-python train.py
+model.py
+Defines the LSTM model:
+
+LSTMmodel: A PyTorch neural network class with a single LSTM layer followed by a fully connected layer
+
+utils.py
+Supports visualization:
+
+plot_technical_indicators(): Plots closing price, MACD with Signal Line, RSI, EMA, and SMA on a multi-panel graph
+
+train.py
+Main script to:
+
+Accept user input for stock symbol, dates, and interval
+
+Fetch and visualize data
+
+Preprocess data and create training tensors
+
+Train the LSTM model using MSE loss and Adam optimizer
+
+Generate 15-day forecast recursively
+
+Plot actual vs predicted vs forecasted prices
+
+Calculate and display R² score on training data
