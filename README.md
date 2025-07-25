@@ -1,5 +1,4 @@
 # STOCK-PRICE-PREDICTION-MODEL-USING-LSTM
-# 📈 Stock Price Prediction using LSTM and PyTorch (with CUDA Support)
 
 This project focuses on predicting future stock prices using historical data and technical indicators through an LSTM (Long Short-Term Memory) neural network, implemented using PyTorch. The model is trained on normalized, time-sequenced data and optionally leverages GPU acceleration using CUDA for efficient computation.
 
@@ -16,39 +15,57 @@ This project focuses on predicting future stock prices using historical data and
 
 ---
 
-🔍 File Descriptions
-data.py
-Handles data-related operations:
+## 🔍 File Descriptions
 
-fetch_data(): Downloads historical stock data using yfinance
+### `data.py` and 'preprocess_data.py'
+Handles all data-related operations:
+- **`fetch_data()`**: Downloads historical stock price data using the `yfinance` API.
+- **`compute_technical_indicators()`**: Computes popular technical indicators:
+  - MACD (Moving Average Convergence Divergence)
+  - RSI (Relative Strength Index)
+  - EMA (Exponential Moving Average)
+  - SMA (Simple Moving Average)
+- **`preprocess_data()`**: 
+  - Normalizes selected features using `MinMaxScaler`
+  - Converts data into LSTM-compatible sequences (X, y)
 
-compute_technical_indicators(): Calculates MACD, RSI, EMA, SMA
+---
 
-preprocess_data(): Normalizes features and generates training sequences (X, y) for LSTM
+### `model.py`
+Defines the LSTM neural network architecture using PyTorch:
+- **`LSTMmodel`**: 
+  - Consists of one LSTM layer and one fully connected (linear) layer
+  - Outputs a single predicted value for the next-day closing price
 
-model.py
-Defines the LSTM model:
+---
 
-LSTMmodel: A PyTorch neural network class with a single LSTM layer followed by a fully connected layer
+### `technical_indicators_plot.py`
+Provides utility functions for data visualization:
+- **`plot_technical_indicators()`**:
+  - Plots the following technical indicators on subplots:
+    - Closing Price
+    - MACD & Signal Line
+    - RSI
+    - SMA and EMA
 
-utils.py
-Supports visualization:
+---
 
-plot_technical_indicators(): Plots closing price, MACD with Signal Line, RSI, EMA, and SMA on a multi-panel graph
+### `train.py`
+Main execution script that orchestrates the end-to-end pipeline:
+- Accepts user input (stock symbol, date range, interval)
+- Fetches and visualizes historical data
+- Computes indicators and preprocesses data
+- Converts sequences to PyTorch tensors
+- Initializes and trains the LSTM model using:
+  - MSE loss (`nn.MSELoss`)
+  - Adam optimizer (`torch.optim.Adam`)
+- Generates 15-day forecast using recursive inference
+- Visualizes:
+  - Actual closing prices
+  - Predicted prices on training data
+  - 15-day forecast
+- Calculates and prints the **R² score** as a performance metric
 
-train.py
-Main script to:
+---
 
-Accept user input for stock symbol, dates, and interval
 
-Fetch and visualize data
-
-Preprocess data and create training tensors
-
-Train the LSTM model using MSE loss and Adam optimizer
-
-Generate 15-day forecast recursively
-
-Plot actual vs predicted vs forecasted prices
-
-Calculate and display R² score on training data
