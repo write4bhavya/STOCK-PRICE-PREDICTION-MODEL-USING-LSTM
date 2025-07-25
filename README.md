@@ -95,6 +95,23 @@ This project uses the following Python libraries:
 
 ---
 
+## 👨‍💻 About the Author
+
+**Bhavya Upadhyay**  
+B.Tech Student, IIT Bombay | Data & AI Enthusiast | Tech Builder
+
+Bhavya is an undergraduate student at the Indian Institute of Technology Bombay, deeply passionate about artificial intelligence, machine learning, and financial forecasting. As part of his academic and technical pursuits, he has built projects that fuse data science with real-world applications — including this LSTM-based stock prediction model.
+
+In addition to his technical expertise, Bhavya is actively involved in leadership roles:
+- 🎾 **Tennis Convener**, IIT Bombay – Organizing inter-college and alumni sporting events under *Court Chronicles*
+- 🚀 **E-Cell Marketing Coordinator** – Driving outreach for innovation tracks like *Cooling Solutions* under *Eureka!*
+
+His approach blends analytical thinking with creativity, often working on everything from predictive modeling to 3D design and prototyping in Fusion 360. Whether it’s forecasting markets, building hardware, or managing large-scale student events, Bhavya brings structure, curiosity, and execution to the table.
+
+**Connect with Bhavya:**  
+[LinkedIn](https://www.linkedin.com/in/bhavya-upadhyay/) | [GitHub](https://github.com/) *(Update with your actual handle if you'd like)*
+
+
 
 
 
